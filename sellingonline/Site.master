@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery-1.7.js" />
+    <script type="text/javascript" src="Scripts/jquery.tooltip.js"></script>
+    
+    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                    <object width="800" height="90" style='float: left;margin-left: -100px;margin-top: -2px;'><param name="movie" value="/SellingOnline/Img/64_800-x-90-(1).swf"/>
+                    <param name="wmode" value="transparent"/>
+                    <embed src="SellingOnline/Img/64_800-x-90-(1).swf" type="application/x-shockwave-flash" wmode="transparent" width="960" height="90"/>
+                    </object>
+            </div>
+            
+            <div class="clear hideSkiplink">
+                <%--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Trang chủ"/>
+                        <asp:MenuItem NavigateUrl="~/FixedPhone.aspx" Text="Điện thoại cố định"/>
+                        <asp:MenuItem NavigateUrl="~/MobilePhone.aspx" Text="Điện thoại di động"/>
+                        <asp:MenuItem NavigateUrl="~/News.aspx" Text="Tin tức"/>
+                        <asp:MenuItem NavigateUrl="~/Account/Login.aspx" Text="Login"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>--%>
+                <%--  đoạn này thêm menu custom
+                --%>
+                <div id="menu">
+                    <ul class="tabs">
+                        <li class="hasmore">
+                             <a class ='nomore' href="Home.aspx"><span>Home</span> </a>
+                        </li>
+                        <li class="hasmore"><a href="FixedPhone.aspx?param=null"><span>Điện thoại bàn</span></a>
+                            <ul class="dropdown" style="display: none;">
+                                <li><a href="FixedPhone.aspx?param=Panasonic" style="padding-left: 0px;">Panasonic</a></li>
+                                <li><a href="FixedPhone.aspx?param=Att" style="padding-left: 0px;">AT&T</a></li>
+                                <li><a href="FixedPhone.aspx?param=Siements" style="padding-left: 0px;">Siements</a></li>
+                                <li><a href="FixedPhone.aspx?param=Uniden" style="padding-left: 0px;">Uniden</a></li>
+                                <li><a href="FixedPhone.aspx?param=Nippon" style="padding-left: 0px;">Nippon</a></li>
+                                <li class="last"><a href="#" style="padding-left: 0px;">Acatel</a></li>
+                            </ul>
+                        </li>
+                        <li class="hasmore"><a href="MobilePhone.aspx?param=null"><span>Điện thoại di động</span></a>
+                            <ul class="dropdown" style="display: none;">
+                                <li><a href="MobilePhone.aspx?param=Nokia" style="padding-left: 0px;">Nokia</a></li>
+                                <li><a href="MobilePhone.aspx?param=Samsung" style="padding-left: 0px;">Samsung</a></li>
+                                <li><a href="MobilePhone.aspx?param=LG" style="padding-left: 0px;">LG</a></li>
+                                <li><a href="MobilePhone.aspx?param=Apple" style="padding-left: 0px;">Apple</a></li>
+                                <li><a href="MobilePhone.aspx?param=SonyErricson" style="padding-left: 0px;">SonyErricson</a></li>
+                                <li><a href="MobilePhone.aspx?param=QMobile" style="padding-left: 0px;">QMobile</a></li>
+                                <li><a href="MobilePhone.aspx?param=FMobile" style="padding-left: 0px;">FMobile</a></li>
+                                <li><a href="MobilePhone.aspx?param=HTC" style="padding-left: 0px;">HTC</a></li>
+                                <li><a href="MobilePhone.aspx?param=Blackberry" style="padding-left: 0px;">Blackberry</a></li>
+                                <li><a href="MobilePhone.aspx?param=FMobile" style="padding-left: 0px;">FMobile</a></li>
+                                <li class="last"><a href="#" style="padding-left: 0px;">FPT</a></li>
+                            </ul>
+                        </li>
+                        <li class="hasmore"><a href="News.aspx"><span>Tin tức khuyến mại</span></a>
+                        </li>
+                        <li class="hasmore"><a href="Cat.aspx"><span>Giỏ hàng</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <%--  đoạn này thêm menu custom
+                --%>
+                <div id="SearchBar">
+                    <div class='SearchBar'>
+                        <span style='display:inline;margin-top:4px'>Chào mừng bạn đến với Nghĩa-Việt-Anh Mobile</span>
+                        <img src="/sellingonline/img/iconkm.jpg" align="absmiddle" /> 
+                        <a href="#" >Tin khuyến mại</a>
+                    </div>
+
+                    <div class='SearchBar'>
+                    Tìm theo
+                    <asp:DropDownList ID="SearchBy" runat="server">
+                        <asp:ListItem Selected="True" Value="bank">-----------------</asp:ListItem>
+                        <asp:ListItem Value="Price">Giá</asp:ListItem>
+                        <asp:ListItem Value="Brand">Thương hiệu</asp:ListItem>
+                        <asp:ListItem Value="ProductName">Tên sản phẩm</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:TextBox ID="SearchKeyword" class="SearchBox" runat="server"></asp:TextBox>
+                     <asp:LinkButton ID="SearchNavigate" runat="server"  >
+                        <asp:Image ID="Image1" runat="server" src="img/find.jpg" align="absmiddle"></asp:Image>
+                    </asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+           <%-- <div id="Categories" style="float: left;clear:both;">
+                <div style='margin-top:30px'>
+                    <img  src="/sellingonline/Img/dmsp.jpg" alt=""></img></div>
+                <div class="boxDm" style="float: left;width:110%;margin-top:-2px;">
+                    <div class="category_block_home">
+                        <div class="category_block_head">
+                            <a href="#">Iphone</a>
+                        </div>
+                    </div>
+                    <div class="category_block_home">
+                        <div class="category_block_head">
+                            <a href="#">IPad</a>
+                        </div>
+                    </div>
+                    <div class="category_block_home">
+                        <div class="category_block_head">
+                            <a href="#">Phụ kiện hot</a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>--%>
+            <div id="MainDiv" style="float:left;width:75%;">
+               
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+
+            <div id="AdditionalTags" style="float:right;width:20%;margin-right:40px;">
+               
+                <asp:ContentPlaceHolder ID="AdditionalContent" runat="server" />
+            </div>
+            
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>
