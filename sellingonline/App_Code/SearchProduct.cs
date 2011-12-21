@@ -65,12 +65,24 @@ namespace App_Code
             sqlAdapter = new SqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dataset);
         }
-        public void SearchProductByCost(ulong ulMinCost, ulong ulMaxCost, DataSet dataset)
+        public void SearchProductByCostAndCatogoryOrBrand(int ulMinCost, int ulMaxCost, string param ,DataSet dataset)
         {
-
-            sqlCommand = new SqlCommand("SELECT * FROM Product WHERE (Cost <='" + ulMaxCost + "' and Cost >= '" + ulMinCost + "' )", connection);
-            sqlAdapter = new SqlDataAdapter(sqlCommand);
-            sqlAdapter.Fill(dataset, "Product");
+            if (param == "1")
+            {
+                sqlCommand = new SqlCommand("SELECT * FROM Product WHERE (Price<='" + ulMaxCost + "' and Price >= '" + ulMinCost + "' AND CatogoryID = '1' )", connection);
+            }
+            else
+            if (param == "2")
+            {
+                sqlCommand = new SqlCommand("SELECT * FROM Product WHERE (Price <='" + ulMaxCost + "' and Price>= '" + ulMinCost + "' AND CatogoryID = '2' )", connection);
+            }
+            else
+            {
+                sqlCommand = new SqlCommand("SELECT * FROM Product WHERE (Price<='" + ulMaxCost + "' and Price >= '" + ulMinCost + "' AND Brand = '"+param+"' )", connection);
+          
+            }
+             sqlAdapter = new SqlDataAdapter(sqlCommand);
+             sqlAdapter.Fill(dataset, "Product");
 
         }
         public void SearchProductByBrand(String strBrandName, DataSet dataset)
