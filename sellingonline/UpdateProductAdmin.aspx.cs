@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using   System.IO ;
+
 using App_Code;
 public partial class UpdateProductAdmin : System.Web.UI.Page
 {
@@ -98,8 +100,23 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        string filename = "";
         if (Request.QueryString["param"] != null)
         {
+            if (FileUploadControl.HasFile)
+            {
+                try
+                {
+                    filename = Path.GetFileName(FileUploadControl.FileName);
+                    FileUploadControl.SaveAs(Server.MapPath("~\\img\\") + filename);
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("Khong luu vao duoc co so du lieu");
+                }
+            }
+            textImageLink.Text = "img\\" + filename;
             string strId = Request.QueryString["param"];
             int ID = Convert.ToInt32(strId);
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -112,6 +129,20 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
         {
             if (Request.QueryString["param1"] == "add")
             {
+                if (FileUploadControl.HasFile)
+                {
+                    try
+                    {
+                        filename = Path.GetFileName(FileUploadControl.FileName);
+                        FileUploadControl.SaveAs(Server.MapPath("~\\img\\") + filename);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+                textImageLink.Text = "img\\" + filename;
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 connection.Open();
                //SqlCommand cmd = new SqlCommand("INSERT INTO Product  VALUES ('" + textCatogory.Text + "','" + textProductName.Text + "','" + textImageLink.Text + "','" + textSumInfo.Text + "','" + textQuantity.Text + "','" + textAvailable.Text + "','" + textPrice.Text + "','" + textBrand.Text + "','" + textPromotionPrice.Text + "','" + textDateIn.Text + "','" + textPromotionAddtion.Text + "','" + textWaranty.Text + "' , '" + textColor.Text + "', '" + textScreen + "','" + textModel.Text + "', '" + textCamera.Text + "', '" + textMusic.Text + "', '" + textFilm.Text + "','" + textFm.Text + "','" + textMemory.Text + "','" + textFlashMemory.Text + "', '" + textJava.Text + "' ,  '" + textBatterry.Text + "', '" + textOS.Text + "' ,'" + textSize.Text + "' ,  '" + textWeight.Text + "' , '" + textChip.Text + "')", connection);
@@ -126,5 +157,21 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
     {
         
      
+    }
+    protected void Button2_Click1(object sender, EventArgs e)
+    {
+        //if (FileUploadControl.HasFile)
+        //{
+        //    try
+        //    {
+        //        string filename = Path.GetFileName(FileUploadControl.FileName);
+        //        FileUploadControl.SaveAs(Server.MapPath("~/") + filename);
+        //        StatusLabel.Text = "Upload status: File uploaded!";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        StatusLabel.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
+        //    }
+        //}
     }
 }
