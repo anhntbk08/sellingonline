@@ -75,7 +75,7 @@ public class DisplayProduct
         if (!isAdmin)
         {
             divMainDisplay.InnerHtml += "<ul class='list-product'>";
-            for (i = 0; i < numberRow; i++)
+            for (i = 0; i < 2; i++)
             {
                 DataRow dataRow = datasetProductDisplay.Tables[0].Rows[a[i]];
                 string strProductName = dataRow[datasetProductDisplay.Tables[0].Columns[0]].ToString();
