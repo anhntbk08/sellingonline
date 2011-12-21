@@ -1,0 +1,176 @@
+﻿body
+{
+}
+
+#ProductHeader
+{
+    display: block;
+    height: 350px;
+    border-top: 1px solid gray;
+}
+
+#ProductImage
+{
+    width: 350px;
+    height: 100%;
+}
+
+#ProductDiscription
+{
+}
+
+.ProductHeader
+{
+    float: left;
+    height: 100%;
+}
+
+#ProductDetail
+{
+    display: block;
+}
+
+.top_p_desctiption_bg
+{
+    position: relative;
+    background: url('../img/top_p_d_bg.png') no-repeat;
+    width: 94px;
+    height: 34px;
+    float: left;
+    top: -28px;
+    left: -1px;
+}
+
+.lbl_c_p_d
+{
+    float: left;
+    margin-left: 20px;
+    font-family: Arial,Tahoma,Times New Roman;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
+.infotitle
+{
+}
+
+.promtion_text
+{
+}
+
+.product_title
+{
+    font-size: 18px;
+    color: #032655;
+    font-family: Arial,Tahoma,Times New Roman;
+    text-decoration: none;
+}
+
+.promtion_text1
+{
+    color: #A60000;
+    font-family: Arial,Tahoma,Times New Roman;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.infotitle
+{
+    color: #3C3C3C;
+    font-family: Arial,Tahoma,Times New Roman;
+    font-size: 12px;
+}
+.promtion_text
+{
+}
+#ProductImage
+{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+
+.order
+{
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border: 1px solid #CCC;
+    width: 80px;
+    height: 30px;
+    background-color: #FAA;
+    clear:both;
+}
+
+.home_menu_ajax
+{
+    border-left: 1px solid #8cc3e9;
+    border-right: 1px solid #8cc3e9;
+}
+.home_menu_ajax ul
+{
+    height: 21px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.home_menu_ajax li
+{
+    float: left;
+}
+.home_menu_ajax a
+{
+    background: url(/sellingonline/img/menu-right_home.jpg) no-repeat right top;
+    padding: 0px 2px 0px 0px;
+    float: left;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #032552;
+    text-transform: uppercase;
+}
+.home_menu_ajax a span
+{
+    background: url(/sellingonline/img/menu-left_home.jpg) no-repeat left top;
+    display: inline-block;
+    padding: 3px 18px 3px 15px;
+}
+.home_menu_ajax a:hover
+{
+    background-position: 100% -21px;
+}
+.home_menu_ajax a:hover span
+{
+    background-position: 0px -21px;
+    color: #fff;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 11px;
+}
+.home_menu_ajax .menu_ajax_select a
+{
+    background-position: 100% -21px;
+    font-weight: bold;
+    cursor: default;
+}
+.home_menu_ajax .menu_ajax_select a span
+{
+    background-position: 0px -21px;
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home_menu_ajax div
+{
+    background: url(/sellingonline/img/bg-menu_home.jpg) repeat-x;
+    height: 21px;
+}
+.ordertext
+{
+    text-decoration: none;
+    text-decoration: none;
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    position:absolute;
+}

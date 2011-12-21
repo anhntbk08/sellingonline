@@ -1,0 +1,512 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: white;
+    margin: 20px auto 0px 200px;
+    border: 1px solid #496077;
+    position: absolute;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.SearchBox
+{
+    width: 200px;
+    border: 1px solid #B4C1C9;
+    background: white url('/SellingOnline/hv.jpg') no-repeat;
+    background-position: right;
+}
+
+
+
+.category_block_home a
+{
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #003C63;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.category_block_head
+{
+    background: url(/sellingOnline/img/tendm.gif) no-repeat 6px;
+    padding: 0px 3px 6px 15p;
+}
+
+.category_block_home
+{
+    background: url(/sellingOnline/img/bggLeftDm.gif) repeat-x top;
+    margin-top:0px;
+}
+
+.boxDm
+{
+    border-left: 1px solid #CED3D7;
+    border-right: 1px solid #CED3D7;
+    border-bottom: 1px solid #CED3D7;
+}
+
+#SearchBar
+{
+    background:url(/sellingOnline/img/bggSearch.jpg) repeat-x;
+}
+
+.SearchBar
+{
+    display:inline-block;
+    margin-right:20px;
+}
+/*
+  Navigation bar
+*/
+/* tabs
+*************************/
+
+ul.tabs
+{
+	display: table;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+
+ul.tabs li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: table-cell;
+	float: left;
+	position: relative;
+}
+
+ul.tabs a
+{
+	position: relative;
+	display: block;
+}
+
+/* dropdowns
+*************************/
+
+ul.dropdown
+{
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: absolute;
+	z-index: 999;
+	top: 100%;
+	width: 250px;
+	display: none;
+	left: 0;
+}
+
+ul.dropdown ul.dropdown
+{
+	top: 0;
+	left: 95%;
+}
+
+ul.dropdown li
+{
+	margin: 0;
+	padding: 0;
+	float: none;
+	position: relative;
+	list-style: none;
+	display: block;
+}
+
+ul.dropdown li a
+{
+	display: block;
+}
+
+
+/* menu-specifc
+*************************/
+
+#menu
+{
+	background: #ffb35a url(/sellingonline/img/topbg.gif) repeat-x;
+	border-bottom: 1px solid #000;
+	height:30px;
+}
+
+
+
+#menu ul li.hasmore
+{
+	background: url(/sellingonline/img/drophighlight.png) no-repeat center 27px;
+	background: url(/sellingonline/img/menuseparate.png) no-repeat right;
+}
+
+#menu ul li h4
+{
+	margin: 0;
+}
+
+#menu ul li h4 a
+{
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+	padding: 0 15px;
+}
+
+#menu ul li a
+{
+	color: #9b2021;
+	padding-left: 4px;
+	text-decoration:none;
+	
+}
+
+#menu ul li a img
+{
+	vertical-align: middle;
+}
+
+#menu ul li a:hover
+{
+	background: url(/sellingonline/img/topselectionleft.png) top left no-repeat;
+	
+}
+
+#menu ul li a span
+{
+	display: block;
+	padding: 5px 15px 5px 11px;
+}
+
+#menu ul li a:hover span
+{
+	background: url(/sellingonline/img/topselectionright.png) top right;
+	
+	
+}
+
+#menu ul.dropdown
+{
+	padding: 10px;
+	background-image: url(/sellingonline/img/dropdown.png);
+	overflow:hidden;
+	border-bottom: 1px solid #dc902f;
+	width: 290px;
+}
+
+#menu ul.dropdown li a
+{
+	border-bottom: 1px solid #e5cd8e;
+	line-height: 30px;
+	overflow: hidden;
+	height: 27px;
+}
+
+#menu ul.dropdown li.last a
+{
+	border-bottom-width: 0;
+}
+
+#menu ul.dropdown li a:hover
+{
+	background: url(/sellingonline/img/menuarrow.png) no-repeat left center;
+	
+}
+
+#menu ul li h4 a:hover
+{
+	background-image: none;
+}
+
+
