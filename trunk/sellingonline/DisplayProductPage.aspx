@@ -4,8 +4,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
     <link href="Styles/DisplayProduct.css" rel="stylesheet" type="text/css" />
     <link href="Styles/x3dom.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.7.js" type="text/javascript"></script>
     <script type="text/javascript" src="Scripts/jquery.tooltip.js"></script>
     <script type="text/javascript" src="Scripts/x3dom.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.prettyPhoto.js"></script>
+
     <style type="text/css">
         .style1
         {
@@ -30,13 +34,19 @@
         $(document).ready(function () {
             var i = $.cookie('ProductCode');
             var j = $.cookie('ProductNumber');
-            $("ul.list-product").quickPager();
+
             if (i = 'null' || i == null) {
                 $.cookie('ProductCode', "");
                 $.cookie('ProductNumber', 0);
                 $.cookie('ProductIndex', "");
             }
-
+            /*
+            Show sản phẩm 3d
+            */
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+            console.log($.prettyPhoto.toString);
+            
+            /*******************************/
             $('.order').bind("click", function () {
                 /* lấy loại hàng hiện tại
                 Lấy số hàng mỗi loại
@@ -110,7 +120,8 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-    <div id='ProductHeader' runat="server">            
+    <div id='ProductHeader' runat="server">   
+        
     </div>
     <div id='ProductDetail' runat="server" style='clear: both;margin-top: 50px;float: left;border: 1px solid gray;width: 80%;height: 700px;'>
         
