@@ -10,7 +10,7 @@ public partial class MobilePhone : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["param"] == "null")
+        if (Request.QueryString["param"] == "1")
         {
             DataSet datasetDisplayProduct = new DataSet();
             SearchProduct searchProduct = new SearchProduct();
