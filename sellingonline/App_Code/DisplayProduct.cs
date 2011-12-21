@@ -20,8 +20,8 @@ public class DisplayProduct
     public DisplayProduct(HtmlGenericControl divMainDisplay)
     {
         this.divMainDisplay = divMainDisplay;
-
     }
+
     public void Display(DataSet datasetProductDisplay, bool isDisplayPromotion, bool isAdmin = false, string currentpath = "")
     {
         int i, j, temp, numberRow;
