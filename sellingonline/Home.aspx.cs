@@ -19,9 +19,9 @@ public partial class _Default : System.Web.UI.Page
     {
         //Doc co so du lieu va liet ke tat ca cac san pham
         SearchProduct searchProduct = new SearchProduct();
-        searchProduct.SearchByHotProduct(datasetProductDisplay , (float)0.2 );
+        searchProduct.SearchAll(datasetProductDisplay  );
         DisplayProduct displayProduct = new DisplayProduct(ProductResult);
-        displayProduct.Display(datasetProductDisplay , true);
+        displayProduct.Display(datasetProductDisplay , false);
         searchProduct.CloseDataBase();
     }
 

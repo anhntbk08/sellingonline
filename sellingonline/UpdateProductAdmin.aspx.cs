@@ -61,30 +61,31 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
                // TextBox30.Text = dataRow[dataset.Tables[0].Columns[36]].ToString();
                // TextBox31.Text = dataRow[dataset.Tables[0].Columns[37]].ToString();
                 // TextBox31.Text = dataRow[dataset.Tables[0].Columns[35]].ToString();
-                //if (dataRow[dataset.Tables[0].Columns[26]].ToString() == "1")
-                //{
-                //    CheckBox1.Checked = true;
-                //}
-                //if (dataRow[dataset.Tables[0].Columns[27]].ToString() == "1")
-                //{
-                //    CheckBox2.Checked = true;
-                //}
-                //if (dataRow[dataset.Tables[0].Columns[28]].ToString() == "1")
-                //{
-                //    CheckBox3.Checked = true;
-                //}
-                //if (dataRow[dataset.Tables[0].Columns[29]].ToString() == "1")
-                //{
-                //    CheckBox4.Checked = true;
-                //}
-                //if (dataRow[dataset.Tables[0].Columns[38]].ToString() == "1")
-                //{
-                //    CheckBox4.Checked = true;
-                //}
-                //if (dataRow[dataset.Tables[0].Columns[39]].ToString() == "1")
-                //{
-                //    CheckBox4.Checked = true;
-                //}
+                string text = dataRow["3G"].ToString();
+                if (dataRow["3G"].ToString() == "True")
+                {
+                    check3G.Checked = true;
+                }
+                if (dataRow["Bluetooth"].ToString() == "True")
+                {
+                    checkBluetoodth.Checked = true;
+                }
+                if (dataRow["Wifi"].ToString() == "True")
+                {
+                    checkWifi.Checked = true;
+                }
+                if (dataRow["USB"].ToString() == "True")
+                {
+                    checkUSB.Checked = true;
+                }
+                if (dataRow["tivi"].ToString() == "True")
+                {
+                    checkTivi.Checked = true;
+                }
+                if (dataRow["VideoCall"].ToString() == "True")
+                {
+                    checkVideoCall.Checked = true;
+                }
 
 
 
@@ -116,12 +117,18 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
                     Response.Write("Khong luu vao duoc co so du lieu");
                 }
             }
-            textImageLink.Text = "img\\" + filename;
-            string strId = Request.QueryString["param"];
+            if (filename != "")
+            {
+                textImageLink.Text = "img\\" + filename;
+            }
+             string strId = Request.QueryString["param"];
             int ID = Convert.ToInt32(strId);
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             connection.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE Product SET CatogoryID = '" + textCatogory.Text + "', ProductName = '" + textProductName.Text + "', ImageLink = '" + textImageLink.Text + "', SumInfo = '" + textSumInfo.Text + "', Quantity = '" + textQuantity.Text + "', Available = '" + textAvailable.Text + "', Price = '" + textPrice.Text + "' ,  Brand = '" + textBrand.Text + "' , PromotionPrice = '" + textPromotionPrice.Text + "' , DateIn = '" + textDateIn.Text + "' , PromotionAddition = '" + textPromotionAddtion.Text + "' , Warranty = '" + textWaranty.Text + "', Color = '" + textColor.Text + "', Screen = '" + textScreen + "' , Model = '" + textModel.Text + "' , Camera = '" + textCamera.Text + "' , Music = '" + textMusic.Text + "', Film = '" + textFilm.Text + "',Fm = '" + textFm.Text + "',Memory ='" + textMemory.Text + "',FlashMemory = '" + textFlashMemory.Text + "',Java = '" + textJava.Text + "' , Battery = '" + textBatterry.Text + "',OS = '" + textOS.Text + "' ,Size = '" + textSize.Text + "' , Weight = '" + textWeight.Text + "' , Chip = '" + textChip.Text + "'  WHERE Product.ID = '" + ID + "'", connection);
+            string t = check3G.Checked.ToString();
+            SqlCommand cmd = new SqlCommand("UPDATE Product SET CatogoryID = '" + textCatogory.Text + "', ProductName = '" + textProductName.Text + "', ImageLink = '" + textImageLink.Text + "', SumInfo = '" + textSumInfo.Text + "', Quantity = '" + textQuantity.Text + "', Available = '" + textAvailable.Text + "', Price = '" + textPrice.Text + "' ,  Brand = '" + textBrand.Text + "' , PromotionPrice = '" + textPromotionPrice.Text + "' , DateIn = '" + textDateIn.Text + "' , PromotionAddition = '" + textPromotionAddtion.Text + "' , Warranty = '" + textWaranty.Text + "', Color = '" + textColor.Text + "', Screen = '" + textScreen + "' , Model = '" + textModel.Text + "' , Camera = '" + textCamera.Text + "' , Music = '" + textMusic.Text + "', Film = '" + textFilm.Text + "',Fm = '" + textFm.Text + "',Memory ='" + textMemory.Text + "',FlashMemory = '" + textFlashMemory.Text + "',Java = '" + textJava.Text + "' , Battery = '" + textBatterry.Text + "',OS = '" + textOS.Text + "' ,Size = '" + textSize.Text + "' , Weight = '" + textWeight.Text + "' , Chip = '" + textChip.Text + "' , [3G] = '"+check3G.Checked.ToString()+"', Bluetooth = '"+checkBluetoodth.Checked.ToString()+"' , Wifi = '"+checkUSB.Checked.ToString()+"' , Tivi = '"+checkTivi.Checked.ToString()+"' ,VideoCall = '"+checkVideoCall.Checked.ToString()+"'  WHERE Product.ID = '" + ID + "'", connection);
+          //  SqlCommand cmd = new SqlCommand("UPDATE Product SET CatogoryID = '" + textCatogory.Text + "', ProductName = '" + textProductName.Text + "', ImageLink = '" + textImageLink.Text + "', SumInfo = '" + textSumInfo.Text + "', Quantity = '" + textQuantity.Text + "', Available = '" + textAvailable.Text + "', Price = '" + textPrice.Text + "' ,  Brand = '" + textBrand.Text + "' , PromotionPrice = '" + textPromotionPrice.Text + "' , DateIn = '" + textDateIn.Text + "' , PromotionAddition = '" + textPromotionAddtion.Text + "' , Warranty = '" + textWaranty.Text + "', Color = '" + textColor.Text + "', Screen = '" + textScreen + "' , Model = '" + textModel.Text + "' , Camera = '" + textCamera.Text + "' , Music = '" + textMusic.Text + "', Film = '" + textFilm.Text + "',Fm = '" + textFm.Text + "',Memory ='" + textMemory.Text + "',FlashMemory = '" + textFlashMemory.Text + "',Java = '" + textJava.Text + "' , Battery = '" + textBatterry.Text + "',OS = '" + textOS.Text + "' ,Size = '" + textSize.Text + "' , Weight = '" + textWeight.Text + "' , Chip = '" + textChip.Text + "' , WiFi = '1' WHERE Product.ID = '" + ID + "'", connection);
+          
             cmd.ExecuteNonQuery();          
             connection.Close();
         }
@@ -146,7 +153,7 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 connection.Open();
                //SqlCommand cmd = new SqlCommand("INSERT INTO Product  VALUES ('" + textCatogory.Text + "','" + textProductName.Text + "','" + textImageLink.Text + "','" + textSumInfo.Text + "','" + textQuantity.Text + "','" + textAvailable.Text + "','" + textPrice.Text + "','" + textBrand.Text + "','" + textPromotionPrice.Text + "','" + textDateIn.Text + "','" + textPromotionAddtion.Text + "','" + textWaranty.Text + "' , '" + textColor.Text + "', '" + textScreen + "','" + textModel.Text + "', '" + textCamera.Text + "', '" + textMusic.Text + "', '" + textFilm.Text + "','" + textFm.Text + "','" + textMemory.Text + "','" + textFlashMemory.Text + "', '" + textJava.Text + "' ,  '" + textBatterry.Text + "', '" + textOS.Text + "' ,'" + textSize.Text + "' ,  '" + textWeight.Text + "' , '" + textChip.Text + "')", connection);
-                SqlCommand cmd = new SqlCommand("INSERT INTO Product (CatogoryID , ProductName , ImageLink , SumInfo , Quantity , Available , Price , Brand , PromotionPrice , DateIn ,PromotionAddition ,Warranty , Color , Screen ,Model ,Camera,Music , Film , Fm ,Memory , FlashMemory ,Java ,Battery , OS , Size , Weight , chip)  VALUES ('" + textCatogory.Text + "' , '" + textProductName.Text + "' ,'" + textImageLink.Text + "','" + textSumInfo.Text + "','" + textQuantity.Text + "','" + textAvailable.Text + "' , '" + textPrice.Text + "' , '" + textBrand.Text + "','" + textPromotionPrice.Text + "' , '" + textDateIn.Text + "','" + textPromotionAddtion.Text + "','" + textWaranty.Text + "' , '" + textColor.Text + "', '" + textScreen + "','" + textModel.Text + "', '" + textCamera.Text + "', '" + textMusic.Text + "', '" + textFilm.Text + "','" + textFm.Text + "','" + textMemory.Text + "','" + textFlashMemory.Text + "', '" + textJava.Text + "' ,  '" + textBatterry.Text + "', '" + textOS.Text + "' ,'" + textSize.Text + "' ,  '" + textWeight.Text + "' , '" + textChip.Text + "')", connection);             
+                SqlCommand cmd = new SqlCommand("INSERT INTO Product (CatogoryID , ProductName , ImageLink , SumInfo , Quantity , Available , Price , Brand , PromotionPrice , DateIn ,PromotionAddition ,Warranty , Color , Screen ,Model ,Camera,Music , Film , Fm ,Memory , FlashMemory ,Java ,Battery , OS , Size , Weight , chip , [3g] ,Bluetooth,Wifi,USB,Tivi , VideoCall)  VALUES ('" + textCatogory.Text + "' , '" + textProductName.Text + "' ,'" + textImageLink.Text + "','" + textSumInfo.Text + "','" + textQuantity.Text + "','" + textAvailable.Text + "' , '" + textPrice.Text + "' , '" + textBrand.Text + "','" + textPromotionPrice.Text + "' , '" + textDateIn.Text + "','" + textPromotionAddtion.Text + "','" + textWaranty.Text + "' , '" + textColor.Text + "', '" + textScreen + "','" + textModel.Text + "', '" + textCamera.Text + "', '" + textMusic.Text + "', '" + textFilm.Text + "','" + textFm.Text + "','" + textMemory.Text + "','" + textFlashMemory.Text + "', '" + textJava.Text + "' ,  '" + textBatterry.Text + "', '" + textOS.Text + "' ,'" + textSize.Text + "' ,  '" + textWeight.Text + "' , '" + textChip.Text + "' , '"+check3G.Checked.ToString()+"' , '"+checkBluetoodth.Checked.ToString()+"','"+checkWifi.Checked.ToString()+"' ,'"+checkUSB.Checked.ToString()+"' , '"+checkTivi.Checked.ToString()+"' , '"+checkVideoCall.Checked.ToString()+"')", connection);             
                 //SqlCommand cmd = new SqlCommand("INSERT INTO Product (CatogoryID , ProductName )  VALUES ('" + textCatogory.Text + "' , '" + textProductName.Text + "') WHERE Product.ID = '" + ID + "' ", connection);             
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -173,5 +180,9 @@ public partial class UpdateProductAdmin : System.Web.UI.Page
         //        StatusLabel.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
         //    }
         //}
+    }
+    protected void checkTiviCall_CheckedChanged(object sender, EventArgs e)
+    {
+
     }
 }

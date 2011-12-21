@@ -23,8 +23,9 @@ public partial class FixedphoneAdmin : System.Web.UI.Page
                 ID = Convert.ToInt32(ProductId);
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 connection.Open();
-   
-                SqlCommand cmd = new SqlCommand("DELETE FROM Product  WHERE Product.Id = '" + ID + "'", connection);
+                SqlCommand cmd = new SqlCommand("DELETE FROM SellProduct  WHERE ProductId = '" + ID + "'", connection);
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("DELETE FROM Product  WHERE Product.Id = '" + ID + "'", connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
             }

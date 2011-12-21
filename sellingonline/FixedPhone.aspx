@@ -140,18 +140,17 @@
             <br class="clearfloat"/>
 			<div class="box_news_safeoff_b">
 				<ul class="list_p_filter_r2">
-                    <li><a href="" >Dưới 500 nghìn đồng" </a></li>
-				   <li><a href="" >Từ 500 nghìn đến 1 triệu đồng </a></li>
-                   <li><a href="" >Từ 1 triệu  đến 1,5 triệu đồng </a></li>
-                   <li><a href="" >Từ 1,5 triệu đến 2 triệu đồng </a></li>
-                   <li><a href="" >Từ 2 triệu đến 2,5 triệu đồng </a></li>
-                   <li><a href="" >Từ 2.5 triệu đến 3 triệu đồng </a></li>
-                   <li><a href="" >Từ 3 triệu đến 3.5 triệu đồng </a></li>
-                   <li><a href="" >Từ 3.5 triệu đến 4 triệu đồng </a></li>
-                   <li><a href="" >Trên 4 triệu </a></li>
+                    <% string url = Request.QueryString+"";int index = url.IndexOf('?');string strParam = url.Substring(index+1);string newurl = "searchresult.aspx?" ; newurl = newurl + strParam; %>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=1000&HighPrice=1500"); %>'>Từ 1 triệu  đến 1,5 triệu đồng </a></li>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=1500&HighPrice=2000"); %>' >Từ 1,5 triệu đến 2 triệu đồng </a></li>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=2000&HighPrice=2500"); %>' >Từ 2 triệu đến 2,5 triệu đồng </a></li>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=2500&HighPrice=3000"); %>' >Từ 2.5 triệu đến 3 triệu đồng </a></li>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=3000&HighPrice=3500"); %>' >Từ 3 triệu đến 3.5 triệu đồng </a></li>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=3500&HighPrice=4000"); %>' >Từ 3.5 triệu đến 4 triệu đồng </a></li>
+                   <li><a href='<% Response.Write(newurl+"&LowPrice=4000&HighPrice=15000"); %>' >Trên 4 triệu </a></li>
 				</ul>
 			</div>
-
+            
         </div>
     </div>
 </asp:Content>

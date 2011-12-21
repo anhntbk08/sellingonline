@@ -106,6 +106,7 @@ public partial class DisplayProductPage : System.Web.UI.Page
         // định dạng quay camera hỗ trợ
 
         //tivi
+
         if (dataRow["Tivi"].ToString().Equals("True"))
             tdTivi.InnerHtml = "Có hỗ trợ";
         else
@@ -116,7 +117,7 @@ public partial class DisplayProductPage : System.Web.UI.Page
         else
             tdVideoCall.InnerHtml = "Không hỗ trợ";
         //wifi
-        if (dataRow["WiFi"].ToString().Equals("true"))
+        if (dataRow["WiFi"].ToString().Equals("True"))
             tdWifi.InnerHtml = "Có hỗ trợ";
         else
             tdWifi.InnerHtml = "Không hỗ trợ";

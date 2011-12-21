@@ -41,7 +41,7 @@
                         <li class="hasmore">
                              <a class ='nomore' href="Home.aspx"><span>Home</span> </a>
                         </li>
-                        <li class="hasmore"><a href="FixedPhone.aspx?param=null"><span>Điện thoại bàn</span></a>
+                        <li class="hasmore"><a href="FixedPhone.aspx?param=2"><span>Điện thoại bàn</span></a>
                             <ul class="dropdown" style="display: none;">
                                 <li><a href="FixedPhone.aspx?param=Panasonic" style="padding-left: 0px;">Panasonic</a></li>
                                 <li><a href="FixedPhone.aspx?param=Att" style="padding-left: 0px;">AT&T</a></li>
@@ -51,7 +51,7 @@
                                 <li class="last"><a href="#" style="padding-left: 0px;">Acatel</a></li>
                             </ul>
                         </li>
-                        <li class="hasmore"><a href="MobilePhone.aspx?param=null"><span>Điện thoại di động</span></a>
+                        <li class="hasmore"><a href="MobilePhone.aspx?param=1"><span>Điện thoại di động</span></a>
                             <ul class="dropdown" style="display: none;">
                                 <li><a href="MobilePhone.aspx?param=Nokia" style="padding-left: 0px;">Nokia</a></li>
                                 <li><a href="MobilePhone.aspx?param=Samsung" style="padding-left: 0px;">Samsung</a></li>
