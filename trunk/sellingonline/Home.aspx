@@ -5,12 +5,24 @@
     <link href="Styles/Home.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="Scripts/jquery.tooltip.js"></script>
     <script type="text/javascript" src="Scripts/jquery.cookie.js"></script>
-
+     <script type="text/javascript" src="Scripts/quickpager.jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             var i = $.cookie('ProductCode');
             var j = $.cookie('ProductNumber');
-
+            /*
+                paging the list product
+            */
+            $("ul.list-product").quickPager({
+                pageSize: 5,
+                currentPage: 1,
+                pagerLocation: "after"
+            });
+            
+            console.log($("ul.list-product"));
+            /*
+                create cookie to save the ordered customer's product 
+            */
             if (i = 'null' || i == null) {
                 $.cookie('ProductCode', "", { expires: 7, path: '/' });
                 $.cookie('ProductNumber', 0, { expires: 7, path: '/' });
@@ -118,16 +130,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div id="ProductResult" runat="server">
-        <div class="home_menu_ajax">
-            <div>
-                <ul>
-                    <li id="pro_bestseller" class="menu_ajax_select"><a href="javascript:;"><span>Sản phẩm
-                        bán chạy</span></a></li>
-                    <li id="promotion" class="menu_ajax_select"><a href="javascript:;"><span>Sản phẩm
-                        khuyến mại</span></a></li>
-                </ul>
-            </div>
-        </div>
+       
     </div>
 
 </asp:Content>

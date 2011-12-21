@@ -20,9 +20,9 @@ public class DisplayProduct
     public DisplayProduct(HtmlGenericControl divMainDisplay)
     {
         this.divMainDisplay = divMainDisplay;
-        
+
     }
-    public void Display(DataSet datasetProductDisplay, bool isDisplayPromotion, bool isAdmin = false ,string currentpath = "" )
+    public void Display(DataSet datasetProductDisplay, bool isDisplayPromotion, bool isAdmin = false, string currentpath = "")
     {
         int i, j, temp, numberRow;
         float x;
@@ -31,7 +31,7 @@ public class DisplayProduct
         a = new int[1000];
         DataRow dataRowI, dataRowJ;
         numberRow = datasetProductDisplay.Tables[0].Rows.Count;
-        
+
         for (i = 0; i < datasetProductDisplay.Tables[0].Rows.Count; i++)
         {
             a[i] = i;
@@ -74,6 +74,7 @@ public class DisplayProduct
         }
         if (!isAdmin)
         {
+            divMainDisplay.InnerHtml += "<ul class='list-product'>";
             for (i = 0; i < numberRow; i++)
             {
                 DataRow dataRow = datasetProductDisplay.Tables[0].Rows[a[i]];
@@ -82,11 +83,12 @@ public class DisplayProduct
 
                 x = (float)Convert.ToInt32(dataRow[datasetProductDisplay.Tables[0].Columns[9]]) / (float)Convert.ToInt32(dataRow[datasetProductDisplay.Tables[0].Columns[7]]);
                 string productcode = dataRow[datasetProductDisplay.Tables[0].Columns[0]].ToString();
+                
                 if (i % 2 == 0)
                 {
                     if (i < datasetProductDisplay.Tables[0].Rows.Count - 1)
                     {
-                        divMainDisplay.InnerHtml += "<div style = 'margin-left:10px; margin-right:10px; '>";
+                        divMainDisplay.InnerHtml += "<li style = 'margin-left:10px; margin-right:10px; '>";
                         divMainDisplay.InnerHtml += "<div class ='productcell' style = 'float:left;'>" +
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
                             "<div  >" +
@@ -94,17 +96,18 @@ public class DisplayProduct
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
                             "</div>";
+
                     }
                     else
                     {
-                        divMainDisplay.InnerHtml += "<div  class ='productcell' style = 'float:left;'>" +
+                        divMainDisplay.InnerHtml += "<li style = 'margin-left:10px; margin-right:10px; '><div  class ='productcell' style = 'float:left;'>" +
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
                             "<div >" +
                                 "Khuyến mai : " + x + "%  :" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
                             "</div>";
-                        divMainDisplay.InnerHtml += "</div>";
+                        divMainDisplay.InnerHtml += "</li>";
                     }
 
                 }
@@ -117,15 +120,15 @@ public class DisplayProduct
                                 "Khuyến mai  " + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
-                            "</div>";
+                            "</div></li>";
 
                 }
-
-
             }
+            divMainDisplay.InnerHtml += "</ul>";
         }
         else
         {
+            divMainDisplay.InnerHtml += "<ul class='list-product'>";
             for (i = 0; i < numberRow; i++)
             {
                 DataRow dataRow = datasetProductDisplay.Tables[0].Rows[a[i]];
@@ -138,28 +141,28 @@ public class DisplayProduct
                 {
                     if (i < datasetProductDisplay.Tables[0].Rows.Count - 1)
                     {
-                        divMainDisplay.InnerHtml += "<div style = 'margin-left:10px; margin-right:10px; '>";
+                        divMainDisplay.InnerHtml += "<li  style = 'margin-left:10px; margin-right:10px; '>";
                         divMainDisplay.InnerHtml += "<div class ='productcell' style = 'float:left;'>" +
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
                             "<div  >" +
                                 "Khuyến mai" + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
-                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?"+currentpath+"&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
+                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
 
                             "</div>" +
                             "</div>";
                     }
                     else
                     {
-                        divMainDisplay.InnerHtml += "<div  class ='productcell' style = 'float:left;'>" +
+                        divMainDisplay.InnerHtml += "<li style = 'margin-left:10px; margin-right:10px; '><div  class ='productcell' style = 'float:left;'>" +
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
                             "<div >" +
                                 "Khuyến mai : " + x + "%  :" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
-                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?"+currentpath+"&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
+                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
                             "</div>" +
                             "</div>";
-                        divMainDisplay.InnerHtml += "</div>";
+                        divMainDisplay.InnerHtml += "</li>";
                     }
 
                 }
@@ -171,15 +174,14 @@ public class DisplayProduct
                             "<div >" +
                                 "Khuyến mai  " + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
-                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?"+ currentpath+"&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
+                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
 
                             "</div>" +
-                            "</div>";
-
+                            "</div></li>";
                 }
 
-
             }
+            divMainDisplay.InnerHtml += "<ul>";
         }
     }
 }
