@@ -59,7 +59,7 @@ public class DisplayProduct
                 {
                     y = (float)Convert.ToInt32(dataRowJ[datasetProductDisplay.Tables[0].Columns[6]]) / (float)Convert.ToInt32(dataRowJ[datasetProductDisplay.Tables[0].Columns[5]]);
                 }
-                if (y < x)
+                if (y > x)
                 {
                     // dataRowTemp
                     temp = a[i];
