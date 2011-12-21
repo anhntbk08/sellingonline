@@ -4,11 +4,17 @@
     <link href="Styles/MobilePhone.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="Scripts/jquery.tooltip.js"></script>
     <script type="text/javascript" src="Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="Scripts/quickpager.jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             var i = $.cookie('ProductCode');
             var j = $.cookie('ProductNumber');
-            $("ul.list-product").quickPager();
+            $("ul.list-product").quickPager({
+                pageSize: 5,
+                currentPage: 1,
+                pagerLocation: "after"
+            });
+
             if (i = 'null' || i == null) {
                 $.cookie('ProductCode', "", { expires: 7, path: '/' });
                 $.cookie('ProductNumber', 0, { expires: 7, path: '/' });
@@ -119,5 +125,33 @@
      </div>  
       <div id="divMobilePhoneDisplay" runat="server">
       </div>     
+</asp:Content>
+
+<asp:Content ID="AdditionalContent" ContentPlaceHolderID="AdditionalContent" Runat="Server">
+    <div id='NewsContent'>
+        <div class="right242">
+            <div class="div4px"></div>
+            <div class="top_bg_safeoff_p">
+                <div class="title_top_right">
+                    <a class="link_hone_new" href="#">Tìm theo giá </a>
+                </div>
+            </div>
+            <br class="clearfloat"/>
+			<div class="box_news_safeoff_b">
+				<ul class="list_p_filter_r2">
+                    <li><a href="" >Dưới 500 nghìn đồng" </a></li>
+				   <li><a href="" >Từ 500 nghìn đến 1 triệu đồng </a></li>
+                   <li><a href="" >Từ 1 triệu  đến 1,5 triệu đồng </a></li>
+                   <li><a href="" >Từ 1,5 triệu đến 2 triệu đồng </a></li>
+                   <li><a href="" >Từ 2 triệu đến 2,5 triệu đồng </a></li>
+                   <li><a href="" >Từ 2.5 triệu đến 3 triệu đồng </a></li>
+                   <li><a href="" >Từ 3 triệu đến 3.5 triệu đồng </a></li>
+                   <li><a href="" >Từ 3.5 triệu đến 4 triệu đồng </a></li>
+                   <li><a href="" >Trên 4 triệu </a></li>
+				</ul>
+			</div>
+
+        </div>
+    </div>
 </asp:Content>
 

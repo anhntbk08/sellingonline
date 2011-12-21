@@ -80,11 +80,10 @@
 
 .productcell
 {
-    margin-left:20px;
+    margin-left: 20px;
     margin-top: 10px;
     border: 1px solid gray;
-    width: 45%;
-    margin-right: 20px;
+    width: 44%;
     border: solid 1px #1D44E0;
     -moz-border-radius: 17px;
     -webkit-border-radius: 5px;
@@ -92,6 +91,7 @@
     -moz-box-shadow: 10px 10px 5px #000000;
     -webkit-box-shadow: 10px 10px 5px #000000;
     box-shadow: 10px 10px 5px #000000;
+    border-image: initial;
 }
 
 .order
@@ -150,6 +150,146 @@
 .title_box_home
 {
     float: left;
-    
-    
+}
+
+/*
+ phần paging và hiện thông tin search theo giá
+*/
+ul.simplePagerNav li
+{
+    display: block;
+    float: left;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-family: georgia;
+}
+
+ul.simplePagerNav li a
+{
+    color: #333;
+    text-decoration: none;
+}
+
+li.currentPage
+{
+    background: red;
+    background: #83bd63;
+}
+
+ul.simplePagerNav li.currentPage a
+{
+    color: #fff;
+}
+ul.simplePagerNav
+{
+    clear: both !important;
+    display: block !important;
+    margin-left: 50px;
+    top: 50px;
+    position: relative;
+    margin-bottom: 50px;
+    height: 150px;
+}
+
+.top_bg_p_c
+{
+    background: url('../img/top_p_category.png') no-repeat;
+    width: 48%;
+    height: 48px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.title_box_home
+{
+    float: left;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.title_box_home h1
+{
+    margin-top: 0px;
+}
+.list-product
+{
+    padding-left: 4px;
+}
+
+.simplePagerContainer
+{
+    background: url('../img/p_safeoff_bg_c.png') repeat-y; /*width: 990px;*/
+    float: left;
+    padding-left: 10px;
+}
+.top_bg_safeoff_p
+{
+    background: url('../img/safeoff_right_top_bg.png') no-repeat top;
+    width: 242px;
+    height: 47px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.title_top_right
+{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.title_top_right a.link_hone_new
+{
+    color: white;
+    font-family: Arial,Tahoma,Times New Roman;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ul.list_p_filter_r2
+{
+    clear: both;
+    display: list-item;
+    float: left;
+    list-style: none outside none;
+    margin: 1px 0 0px;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-left: 5px;
+    text-align: left;
+    line-height: 1.6;
+    color: #3C3C3C;
+}
+
+ul.list_p_filter_r2 li
+{
+    background-image: url("../img/home_news_other.png");
+    background-position: 0 7px;
+    background-repeat: no-repeat;
+    display: list-item;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-weight: normal;
+}
+
+.box_news_safeoff_b
+{
+    border-left: solid 1px #D6D6D6;
+    border-right: solid 1px #D6D6D6;
+    border-bottom: solid 1px #D6D6D6;
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#ContentWrapper
+{
+    height: 500px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: solid 1px #AB0;
 }
