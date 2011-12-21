@@ -44,6 +44,7 @@ public partial class DisplayProductPage : System.Web.UI.Page
         ProductHeader.InnerHtml += "<h3 class='product_addition'><span class = 'infotitle'> Thông tin thêm </span>: <span class ='promtion_text'> " + dataRow[datasetProductDisplay.Tables[0].Columns[11]].ToString() + "</span><h3/>";
         ProductHeader.InnerHtml += "<h3 class='product_addition'> <span class = 'infotitle'> Bảo hành </span>  : <span class ='promtion_text'> " + dataRow[datasetProductDisplay.Tables[0].Columns[12]].ToString() + "</span>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp& <span class = 'infotitle'>Kho :</span> <span class ='promtion_text'>" + available + " </span><h3/> </div>";
         ProductHeader.InnerHtml += "<div class = 'order' keyproduct="+ productcode+"><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" ;
+        ProductHeader.InnerHtml += "<a href='3dResource/model3d_"+code+".html?iframe=true&width=400&height=400' rel='prettyPhoto[iframe]' >Xem sản phẩm 3d</a>";
 
         /*
          * Phần chi tiết sản phẩm
