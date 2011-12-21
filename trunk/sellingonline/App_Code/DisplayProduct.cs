@@ -90,8 +90,9 @@ public class DisplayProduct
                     {
                         divMainDisplay.InnerHtml += "<li style = 'margin-left:10px; margin-right:10px; '>";
                         divMainDisplay.InnerHtml += "<div class ='productcell' style = 'float:left;'>" +
-                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
+                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div  >" +
+                                "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
                                 "Khuyến mai" + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
@@ -101,8 +102,9 @@ public class DisplayProduct
                     else
                     {
                         divMainDisplay.InnerHtml += "<li style = 'margin-left:10px; margin-right:10px; '><div  class ='productcell' style = 'float:left;'>" +
-                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
+                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
+                                "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
                                 "Khuyến mai : " + x + "%  :" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
@@ -115,8 +117,9 @@ public class DisplayProduct
                 {
 
                     divMainDisplay.InnerHtml += "<div class ='productcell' style = 'float:left;'>" +
-                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
+                           "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
+                            "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
                                 "Khuyến mai  " + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
@@ -143,8 +146,9 @@ public class DisplayProduct
                     {
                         divMainDisplay.InnerHtml += "<li  style = 'margin-left:10px; margin-right:10px; '>";
                         divMainDisplay.InnerHtml += "<div class ='productcell' style = 'float:left;'>" +
-                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
+                           "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div  >" +
+                               "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
                                 "Khuyến mai" + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
@@ -155,8 +159,9 @@ public class DisplayProduct
                     else
                     {
                         divMainDisplay.InnerHtml += "<li style = 'margin-left:10px; margin-right:10px; '><div  class ='productcell' style = 'float:left;'>" +
-                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
+                           "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
+                                "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
                                 "Khuyến mai : " + x + "%  :" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
@@ -170,8 +175,9 @@ public class DisplayProduct
                 {
 
                     divMainDisplay.InnerHtml += "<div class ='productcell' style = 'float:left;'>" +
-                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + "/></a>" +
+                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
+                                "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
                                 "Khuyến mai  " + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
