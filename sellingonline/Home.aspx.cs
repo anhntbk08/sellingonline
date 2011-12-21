@@ -23,8 +23,6 @@ public partial class _Default : System.Web.UI.Page
         DisplayProduct displayProduct = new DisplayProduct(ProductResult);
         displayProduct.Display(datasetProductDisplay , true);
         searchProduct.CloseDataBase();
-        
-
     }
 
    

@@ -29,7 +29,7 @@
         $(document).ready(function () {
             var i = $.cookie('ProductCode');
             var j = $.cookie('ProductNumber');
-
+            $("ul.list-product").quickPager();
             if (i = 'null' || i == null) {
                 $.cookie('ProductCode', "");
                 $.cookie('ProductNumber', 0);
