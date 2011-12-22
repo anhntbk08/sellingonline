@@ -84,7 +84,7 @@
                     title.css('position', 'relative');
                     title.css('background-color', 'gray');
                     title.css('color', 'blue');
-                    var textcontent = $("<span/>").html('Sản phẩm này vô giá thưa các cụ');
+                    var textcontent = $("<span/>").html('');
                     $.merge(title, ob);
                     $.merge(title, textcontent);
                     return title;
@@ -128,8 +128,7 @@
                 <ul>
                     <li id="pro_bestseller" class="menu_ajax_select"><a href="javascript:;"><span>Sản phẩm
                         bán chạy</span></a></li>
-                    <li id="promotion" class="menu_ajax_select"><a href="javascript:;"><span>Sản phẩm
-                        khuyến mại</span></a></li>
+                   
                 </ul>
             </div>
         </div>
