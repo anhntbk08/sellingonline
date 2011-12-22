@@ -72,13 +72,14 @@
                 showURL: false,
                 bodyHandler: function () {
                     var ob = $("<img/>").attr("src", this.src);
+                    var name = $(this).attr("imgName");
                     ob.css('position', 'relative');
                     ob.css('float', 'left');
-                    var title = $("<div/>").html("<b>Sản phẩm này của tuấn anh đẻ ra<b>");
+                    var title = $("<div/>").html("<b>" + name + "<b>");
                     title.css('position', 'relative');
                     title.css('background-color', 'gray');
                     title.css('color', 'blue');
-                    var textcontent = $("<span/>").html('Sản phẩm này vô giá thưa các cụ');
+                    var textcontent = $("<span/>").html('');
                     $.merge(title, ob);
                     $.merge(title, textcontent);
                     return title;
