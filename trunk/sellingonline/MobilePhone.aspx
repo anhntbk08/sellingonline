@@ -120,7 +120,7 @@
       <div class="top_bg_p_c">
         <div class="title_box_home">
             <h1>
-                <strong style="font-size: 18px; color: #FFFFFF">Laptop &amp; TabletPCs </strong>
+                <strong style="font-size: 18px; color: #FFFFFF">Điện thoại di động </strong>
             </h1>
         </div>
      </div>  

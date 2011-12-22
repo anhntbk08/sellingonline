@@ -220,6 +220,7 @@ ul.simplePagerNav
     background: url('../img/p_safeoff_bg_c.png') repeat-y; /*width: 990px;*/
     float: left;
     padding-left: 10px;
+    width:100%;
 }
 .top_bg_safeoff_p
 {
@@ -292,4 +293,16 @@ ul.list_p_filter_r2 li
     -moz-border-radius: 15px;
     border-radius: 15px;
     border: solid 1px #AB0;
+}
+#MainContent_divMobilePhoneDisplay
+{
+    clear:both;
+}
+.simplePagerContainer
+{
+    width:100%;
+}
+ul.list-product li
+{
+    list-style-type: none;
 }

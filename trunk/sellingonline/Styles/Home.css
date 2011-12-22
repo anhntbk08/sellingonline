@@ -246,3 +246,8 @@ ul.simplePagerNav
     margin-bottom: 50px;
     height:150px;
 }
+
+ul.list-product li
+{
+    list-style-type: none;
+}
