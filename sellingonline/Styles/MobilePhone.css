@@ -275,3 +275,15 @@ ul.list_p_filter_r2 li
     border-radius: 15px;
     border: solid 1px #AB0;
 }
+#MainContent_divMobilePhoneDisplay
+{
+    clear:both;
+}
+.simplePagerContainer
+{
+    width:100%;
+}
+ul.list-product li
+{
+    list-style-type: none;
+}
