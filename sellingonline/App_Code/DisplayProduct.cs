@@ -93,7 +93,7 @@ public class DisplayProduct
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div  >" +
                                 "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
-                                "Khuyến mai" + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
+                                "Khuyến mai" + dataRow[datasetProductDisplay.Tables[0].Columns[9]].ToString() + " <br> Giá bán " + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() + "</br>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
                             "</div>";
@@ -105,7 +105,7 @@ public class DisplayProduct
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
                                 "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
-                                "Khuyến mai : " + x + "%  :" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
+                                "Khuyến mai" + dataRow[datasetProductDisplay.Tables[0].Columns[9]].ToString() + " <br> Giá bán " + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() + "</br>" +
                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
                             "</div>";
@@ -120,7 +120,7 @@ public class DisplayProduct
                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
                             "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
-                                "Khuyến mai  " + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
+                                "Khuyến mai" + dataRow[datasetProductDisplay.Tables[0].Columns[9]].ToString() + " <br> Giá bán " + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() + "</br>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='#' style = 'display:block'> Đặt hàng</a></div>" +
                             "</div>" +
                             "</div></li>";
@@ -149,7 +149,7 @@ public class DisplayProduct
                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div  >" +
                                "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
-                                "Khuyến mai" + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
+                                "Khuyến mai" + dataRow[datasetProductDisplay.Tables[0].Columns[9]].ToString() + " <br> Giá bán " + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() + "</br>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
 
@@ -162,7 +162,7 @@ public class DisplayProduct
                            "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
                                 "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
-                                "Khuyến mai : " + x + "%  :" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
+                                "Khuyến mai" + dataRow[datasetProductDisplay.Tables[0].Columns[9]].ToString() + " <br> Giá bán " + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() + "</br>" +
                                "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
                             "</div>" +
@@ -178,7 +178,7 @@ public class DisplayProduct
                             "<a href = 'DisplayProductPage.aspx?Productcode=" + productcode + "'><img class = 'producting' src=" + ImagePath + " alt='HTML tutorial' width = 100px height = 100px style ='float:left' hiddenId=" + productcode + " imgName =" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + " ></img></a>" +
                             "<div >" +
                                 "<br> Sản phẩm <b>" + dataRow[datasetProductDisplay.Tables[0].Columns[2]].ToString() + "</b></br>" +
-                                "Khuyến mai  " + x + "%" + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() +
+                                "Khuyến mai" + dataRow[datasetProductDisplay.Tables[0].Columns[9]].ToString() + " <br> Giá bán " + dataRow[datasetProductDisplay.Tables[0].Columns[7]].ToString() + "</br>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='UpdateProductAdmin.aspx?param=" + ID + "' style = 'display:block'> UPDATE</a></div>" +
                                 "<div class = 'order' keyproduct=" + productcode + "><a class='ordertext' href ='?" + currentpath + "&delete=" + ID + "' style = 'display:block'> DELETE</a></div>" +
 
