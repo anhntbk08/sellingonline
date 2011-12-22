@@ -82,7 +82,7 @@
 {
     margin-top: 10px;
     border: 1px solid gray;
-    width: 45%;
+    width: 39%;
     margin-right: 20px;
     border: solid 1px #1D44E0;
     -moz-border-radius: 17px;
@@ -202,6 +202,7 @@ padding-top: 10px;
     /*width: 990px;*/
     float: left;
     padding-left: 10px;
+    height:900px;
 }
 .top_bg_safeoff_p
 {
