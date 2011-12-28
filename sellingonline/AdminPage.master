@@ -90,10 +90,10 @@
                         <li class="hasmore"><a href="UpdateProductAdmin.aspx?param1=add"><span>Thêm sản phẩm</span></a>
                         </li>
 
-                        <li class="hasmore"><a href="FixedPhoneAdmin.aspx?param=null"><span>Quản lý tin tức</span></a>
+                        <li class="hasmore"><a href="#"><span>Quản lý tin tức</span></a>
                             <ul class="dropdown" style="display: none;">
-                                <li><a href="FixedPhoneAdmin.aspx?param=Panasonic" style="padding-left: 0px;">Thêm</a></li>
-                                <li><a href="FixedPhoneAdmin.aspx?param=Att" style="padding-left: 0px;">Sửa / Xóa</a></li>
+                                <li><a href="AddNewsPage.aspx" style="padding-left: 0px;">Thêm</a></li>
+                                <li><a href="EditNewsPage.aspx" style="padding-left: 0px;">Sửa / Xóa</a></li>
                             </ul>
                         </li>
                         
