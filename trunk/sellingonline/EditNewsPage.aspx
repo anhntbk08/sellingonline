@@ -1,11 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.master" AutoEventWireup="true" CodeFile="EditNewsPage.aspx.cs" Inherits="EditNewsPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminPage.master" AutoEventWireup="true"
+    CodeFile="EditNewsPage.aspx.cs" Inherits="EditNewsPage" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
-
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
     <link href="Styles/Home.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="Scripts/jquery.tooltip.js"></script>
     <script type="text/javascript" src="Scripts/jquery.cookie.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function () {
             var i = $.cookie('ProductCode');
@@ -115,9 +114,37 @@
 
         });
     </script>
+    <style type="text/css">
+        ul.list-product li
+        {
+            list-style-type: none;
+            border: 1px gray solid;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 3px;
+        }
+        .news-btn
+        {
+            float: right;
+            margin-right: 10px;
+            text-decoration: none;
+            -webkit-border-radius: 31px;
+            -moz-border-radius: 31px;
+            border-radius: 5px;
+            border: 0px solid black;
+            background-color: #DDD;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10pt;
+            color: #888 !important;
+            text-align: center;
+            padding: 1px;
+            width: 60px;
+        }
+    </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+    <div runat="server" id="divMainDisplay">
+    </div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="AdditionalContent" Runat="Server">
+<asp:Content ID="Content3" ContentPlaceHolderID="AdditionalContent" runat="Server">
 </asp:Content>
-
