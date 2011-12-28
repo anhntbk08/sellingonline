@@ -74,7 +74,7 @@ public partial class RecipePage : System.Web.UI.Page
                     ProductTable.InnerHtml += "<td class ='productshow'>" + (i + 1) + "</td>";
                     ProductTable.InnerHtml += "<td class ='productshow'>" + strProductName + "</td>";
                     ProductTable.InnerHtml += "<td class ='productshow'>" + price + ".000 </td>";
-                    ProductTable.InnerHtml += "<td class ='productshow'>" + "<input type ='text' class = 'numorder' value = '" + productsIndex[i] + "'>" + "</td>";
+                    ProductTable.InnerHtml += "<td class ='productshow'>" + productsIndex[i]  + "</td>";
                     ProductTable.InnerHtml += "<td class ='productshow'>" + (price * float.Parse(productsIndex[i])) + ".000 </td>";
                     ProductTable.InnerHtml += "</tr>";
                     searchProduct.CloseDataBase();
