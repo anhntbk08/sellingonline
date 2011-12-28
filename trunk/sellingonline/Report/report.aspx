@@ -13,11 +13,18 @@
     <div>
     
         <p>
-        Picker Date to show report.<br />
+        Picker Date to show report.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Picker Date to show report.<br />
             <mark:datetimepicker ID="Picker1" runat="server" PickerCssClass="Picker" 
                 FirstDayOfWeek="Sunday" Format="dd/MM/yyyy" ontextchanged="RenderReport" 
                 ShowDatePicker="True" ShowTimePicker="False" />
-            <asp:Button ID="Button1" runat="server" Text="Button" onclick="RenderReport" />
+        
+            <mark:datetimepicker ID="Picker2" runat="server" PickerCssClass="Picker" 
+                FirstDayOfWeek="Sunday" Format="dd/MM/yyyy" ontextchanged="RenderReport" 
+                ShowDatePicker="True" ShowTimePicker="False" />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <asp:Button ID="Button1" runat="server" Text="Report" onclick="RenderReport" />
         </p>
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" 
             GroupTreeImagesFolderUrl="" Height="50px" 
