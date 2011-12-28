@@ -8,7 +8,8 @@
 
             $(".deleteCookie").bind("click", function () {
                 var stt = parseInt($(this).attr('id'));
-                console.log(' stt ',stt);
+                console.log(' stt ', stt);
+
                 var code = $.trim($.cookie('ProductCode'));
                 var index = $.trim($.cookie('ProductIndex'));
                 var count = $.trim($.cookie('ProductNumber'));
@@ -16,18 +17,24 @@
                 // cho vào mảng
                 var ProductArr = code.split(" ");
                 var ProductIndex = index.split(" ");
+
                 // trước
                 console.log('Product arr ', ProductArr);
                 console.log('Product index ', ProductIndex);
                 console.log('Product number ', count);
+
                 count -= parseInt(ProductIndex[stt]);
+
                 ProductArr.splice(stt, 1);
                 ProductIndex.splice(stt, 1)
+
                 /*
                 update table
                 */
+
                 code = ProductArr.join(' ');
                 index = ProductIndex.join(' ');
+
                 $.cookie('ProductCode', code);
                 $.cookie('ProductIndex', index);
                 $.cookie('ProductNumber', count);
@@ -36,11 +43,13 @@
                 console.log('Product arr ', ProductArr);
                 console.log('Product index ', ProductIndex);
                 console.log('Product number ', count);
+
                 window.location.reload();
             });
 
 
         });
+
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
