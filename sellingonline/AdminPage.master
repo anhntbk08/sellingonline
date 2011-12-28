@@ -75,18 +75,7 @@
                             </ul>
                         </li>
 
-                        <!--<li class="hasmore"><a href="News.aspx"><span>Tin tức khuyến mại</span></a> -->
-                        <li class="hasmore"><a href="FixedPhoneAdmin.aspx?param=null"><span>Điện thoại bàn</span></a>
-                            <ul class="dropdown" style="display: none;">
-                                <li><a href="FixedPhoneAdmin.aspx?param=Panasonic" style="padding-left: 0px;">Panasonic</a></li>
-                                <li><a href="FixedPhoneAdmin.aspx?param=Att" style="padding-left: 0px;">AT&T</a></li>
-                                <li><a href="FixedPhoneAdmin.aspx?param=Siements" style="padding-left: 0px;">Siements</a></li>
-                                <li><a href="FixedPhoneAdmin.aspx?param=Uniden" style="padding-left: 0px;">Uniden</a></li>
-                                <li><a href="FixedPhoneAdmin.aspx?param=Nippon" style="padding-left: 0px;">Nippon</a></li>
-                                <li class="last"><a href="#" style="padding-left: 0px;">Acatel</a></li>
-                            </ul>
-                        </li>
-
+                        
                         <li class="hasmore"><a href="UpdateProductAdmin.aspx?param1=add"><span>Thêm sản phẩm</span></a>
                         </li>
 
