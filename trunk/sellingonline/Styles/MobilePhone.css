@@ -82,7 +82,7 @@
 {
     margin-top: 10px;
     border: 1px solid gray;
-    width: 39%;
+    width: 46%;
     margin-right: 20px;
     border: solid 1px #1D44E0;
     -moz-border-radius: 17px;
@@ -288,4 +288,9 @@ ul.list_p_filter_r2 li
 ul.list-product li
 {
     list-style-type: none;
+    width :100%;
+}
+.simplePagerContainer 
+{
+    width:99%;
 }
