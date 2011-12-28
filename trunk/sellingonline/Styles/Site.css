@@ -298,7 +298,7 @@ div.accountInfo
 {
     width: 200px;
     border: 1px solid #B4C1C9;
-    background: white url('/SellingOnline/hv.jpg') no-repeat;
+    /*background: white url('/SellingOnline/hv.jpg') no-repeat;*/
     background-position: right;
 }
 
