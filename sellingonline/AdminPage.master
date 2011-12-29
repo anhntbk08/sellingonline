@@ -22,22 +22,7 @@
                     <embed src="SellingOnline/Img/64_800-x-90-(1).swf" type="application/x-shockwave-flash" wmode="transparent" width="960" height="90"/>
                     </object>
             </div>
-            <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
-                        ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Welcome <span class="bold">
-                            <asp:LoginName ID="HeadLoginName" runat="server" />
-                        </span>! [
-                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
-                            LogoutPageUrl="~/" />
-                        ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
-            </div>
+           
             <div class="clear hideSkiplink">
                 
                 <%--  đoạn này thêm menu custom
@@ -84,6 +69,8 @@
                                 <li><a href="AddNewsPage.aspx" style="padding-left: 0px;">Thêm</a></li>
                                 <li><a href="EditNewsPage.aspx" style="padding-left: 0px;">Sửa / Xóa</a></li>
                             </ul>
+                        </li>
+                        <li class="hasmore"><a href="Report/report.aspx"><span>Xem báo cáo</span></a>
                         </li>
                         
                     </ul>
