@@ -4,5 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <asp:Button ID="Button1" runat="server" Text="Button" />
+    <div ID = "DisplayPage" >
+    </div>
 </asp:Content>
 
