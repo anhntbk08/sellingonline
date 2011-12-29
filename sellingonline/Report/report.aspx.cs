@@ -15,9 +15,9 @@ using CrystalDecisions.CrystalReports.Engine;
 public partial class Report_report : System.Web.UI.Page
 {
     private SqlConnection connection;
-    private SqlDataAdapter sqlAdapter1, sqlAdapter2;
+    private SqlDataAdapter sqlAdapter1, sqlAdapter2, sqlAdapter3;
     private SqlCommand sqlCommand;
-    private String sql1, sql2;
+    private String sql1, sql2, sql3;
     private string isReload = "false";
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -35,10 +35,15 @@ public partial class Report_report : System.Web.UI.Page
             sqlCommand.CommandText = sql2;
             sqlAdapter2 = new SqlDataAdapter(sqlCommand);
             sqlAdapter2.Fill(dataset, "Top");
+
+            sql3 = "SELECT Recipe.CustomerName, SUM(SellProduct.Quantity * Product.Price) FROM Recipe INNER JOIN SellProduct ON Recipe.Id = SellProduct.RecipeId INNER JOIN Product ON SellProduct.ProductId = Product.Id WHERE (Recipe.DateCreat = '11/11/1900') GROUP BY Recipe.CustomerName";
+            sqlCommand.CommandText = sql3;
+            sqlAdapter3 = new SqlDataAdapter(sqlCommand);
+            sqlAdapter3.Fill(dataset, "Customer");
             
             ReportDocument myReport = new ReportDocument();
             myReport.Load(Server.MapPath("CrystalReport.rpt"));
-            myReport.SetDataSource(dataset.Tables[1]);
+            myReport.SetDataSource(dataset);
             CrystalReportViewer1.ReportSource = myReport;
             CrystalReportViewer1.RefreshReport();
            
@@ -62,12 +67,17 @@ public partial class Report_report : System.Web.UI.Page
         //sqlCommand = new SqlCommand("SELECT * FROM Product", connection);
         sqlAdapter1 = new SqlDataAdapter(sqlCommand);
         sqlAdapter1.Fill(dataset, "Sum");
-
-        sql2 = "SELECT  Product.ProductName , SUM(SellProduct.Quantity) FROM Recipe, SellProduct, Product WHERE Recipe.Id = SellProduct.RecipeId AND SellProduct.ProductId = Product.Id AND Recipe.DateCreat BETWEEN'" + MyDateTime + "' AND '" + MyDateTime2 + "' GROUP BY Product.ProductName";
+       
+        sql2 = "SELECT TOP(10) Product.ProductName, SUM(SellProduct.Quantity) AS Total, Product.Brand FROM Product INNER JOIN SellProduct ON Product.Id = SellProduct.ProductId INNER JOIN Recipe ON SellProduct.RecipeId = Recipe.Id WHERE (Recipe.DateCreat BETWEEN'" + MyDateTime + "' AND '" + MyDateTime2 + "') GROUP BY Product.ProductName, Product.Brand ORDER BY Total DESC";
         sqlCommand.CommandText = sql2;
         sqlAdapter2 = new SqlDataAdapter(sqlCommand);
         sqlAdapter2.Fill(dataset, "Top");
 
+        sql3 = "SELECT TOP (3) Recipe.CustomerName, Recipe.PhoneNumber, SUM(SellProduct.Quantity * Product.Price) AS Money FROM Recipe INNER JOIN SellProduct ON Recipe.Id = SellProduct.RecipeId INNER JOIN Product ON SellProduct.ProductId = Product.Id WHERE (Recipe.DateCreat BETWEEN'" + MyDateTime + "' AND '" + MyDateTime2 + "') GROUP BY Recipe.PhoneNumber, Recipe.CustomerName ORDER BY Money DESC";
+        sqlCommand.CommandText = sql3;
+        sqlAdapter3 = new SqlDataAdapter(sqlCommand);
+        sqlAdapter3.Fill(dataset, "Customer");
+        connection.Close();
         
         int i;
         int sum1 = 0;
@@ -91,12 +101,8 @@ public partial class Report_report : System.Web.UI.Page
         t4.Text = sum2.ToString();
         TextObject t5 = (TextObject)myReport.ReportDefinition.ReportObjects["Text9"];
         t5.Text = dataset.Tables[0].Rows.Count.ToString();
-
-        DataRow d = dataset.Tables[1].Rows[0];
-        String dd = d[0].ToString();
-        int ddd = dataset.Tables[1].Rows.Count;
-
-        myReport.SetDataSource(dataset.Tables[1]);           
+                       
+        myReport.SetDataSource(dataset);           
                
         CrystalReportViewer1.ReportSource = myReport;
         
